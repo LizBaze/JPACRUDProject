@@ -1,0 +1,4 @@
+rootProject.name = 'Musicians'
+
+
+includeFlat 'JPAMusicians'
