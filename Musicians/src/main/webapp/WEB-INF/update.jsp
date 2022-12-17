@@ -15,20 +15,38 @@
 
 <body id="FullPage">
 <%@ include file="nav.jsp"%>
-
-<h1>Update</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h1>Update ${musician.name}</h1>
 
 <form action="update.do" method="POST">
 	<input type="hidden" value="${musician.id}" name="id"/>
 	
 	<label for="name">Name</label>
-	<input type="text" name="name" value="${musician.name}"/>
+	<input type="text" name="name" value="${musician.name}" required/>
 
 	<label for="genre">Genre</label>
 	<input type="text" name="genre"  value="${musician.genre}"/>
 
 	<label for="home">From</label>
 	<input type="text" name="home" value="${musician.home}"/>
+	
+	<br>
+	<br>
+	
+	<label for="imageurl">Image URL</label>
+	<textarea rows="1" name="imageUrl">${musician.imageUrl}</textarea>
+	
+	
+	<br><br>
+
+	<label for="about">About</label>
+	<br>
+	<textarea rows="5" name="about">${musician.about}</textarea>
 	
 	<br>
 	
@@ -52,16 +70,12 @@
 	</c:otherwise>
 	</c:choose>
 	
-	
-	<br><br>
-
-	<label for="about">About</label>
-	<textarea rows="5" cols="50" name="about">${musician.about}</textarea>
-	
 	<br><br>
 	
 	<input id="Button" class="btn btn-primary" type="submit" value="Submit"/>
 	</form>
+	
+</div>
 
 </body>
 </html>

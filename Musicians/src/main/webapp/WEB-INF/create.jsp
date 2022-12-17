@@ -20,11 +20,13 @@
 <br>
 <br>
 
+<div class="container">
+
 <h1>Add a new fave</h1>
 
 <form action="create.do" method="POST">
 	<label for="name">Name</label>
-	<input type="text" name="name"/>
+	<input type="text" name="name" required/>
 
 	<label for="genre">Genre</label>
 	<input type="text" name="genre"/>
@@ -32,10 +34,22 @@
 	<label for="home">From</label>
 	<input type="text" name="home"/>
 	
+	<br><br>
+	
+	<label for="imageurl">Image URL</label>
+	<textarea rows="1" name="imageUrl">${musician.imageUrl}</textarea>
+	
+	<br><br>
+	
+	<label for="about">About</label>
+	<br>
+	<textarea rows="5" name="about"></textarea>
+	
 	<br>
 	
 	<input type="radio" id="true" name="active" value="true" checked="checked"/>
 	<label for="true">Active</label>
+	
 	<br>
 	
 	<input type = "radio" id="false" name = "active" value="false"/>
@@ -43,14 +57,13 @@
 	
 	<br><br>
 
-	<label for="about">About</label>
-	<textarea rows="5" cols="50" name="about"></textarea>
+	
 	
 	<br><br>
 	
 	<input id="Button" class="btn btn-primary" type="submit" value="Submit"/>
 </form>
-
+</div>
 
 </body>
 </html>

@@ -88,8 +88,8 @@ public class MusicianController {
 	}
 	
 	@PostMapping(path="update.do", 
-			params= { "id", "name", "genre", "home", "active", "about" } )
-	public String update(int id, String name, String genre, String home, boolean active, String about, RedirectAttributes redir) {
+			params= { "id", "name", "genre", "home", "imageUrl", "active", "about" } )
+	public String update(int id, String name, String genre, String home, String imageUrl, boolean active, String about, RedirectAttributes redir) {
 		
 		Musician update = new Musician();
 		update.setName(name);
@@ -97,6 +97,7 @@ public class MusicianController {
 		update.setHome(home);
 		update.setActive(active);
 		update.setAbout(about);
+		update.setImageUrl(imageUrl);
 		
 		dao.update(id, update);
 		

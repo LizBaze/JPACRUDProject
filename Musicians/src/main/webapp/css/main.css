@@ -2,7 +2,7 @@
   width: auto,;
   height: auto;
   max-width: 600px;
-  max-height: 600px;
+  max-height: 400px;
 }
 
 #FullPage {
@@ -42,4 +42,8 @@
 
 a {
 	color: #FDD602;
+}
+
+textarea{
+	min-width: 100%;
 }
