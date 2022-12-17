@@ -9,67 +9,41 @@ import javax.persistence.Id;
 @Entity
 public class Musician {
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
-	@Column(name="stage_name")
-	private String stageName;
-	
+
+	private String name;
+
 	private String genre;
-	
-	private String from;
-	
+
+	private String home;
+
 	private Boolean active;
-	
-	@Column(name="image_url")
+
+	@Column(name = "image_url")
 	private String imageUrl;
 	
-	@Column(name="real_name")
-	private String realName;
+	private String about;
 	
-	
-	public Musician() {
-		
-	}
 
+	public Musician() {
+
+	}
 
 	public int getId() {
 		return id;
 	}
 
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
-	public String getStageName() {
-		return stageName;
-	}
-
-
-	public void setStageName(String stageName) {
-		this.stageName = stageName;
-	}
-
 
 	public String getGenre() {
 		return genre;
 	}
 
-
 	public void setGenre(String genre) {
 		this.genre = genre;
-	}
-
-
-	public String getFrom() {
-		return from;
-	}
-
-
-	public void setFrom(String from) {
-		this.from = from;
 	}
 
 
@@ -77,37 +51,46 @@ public class Musician {
 		return active;
 	}
 
-
 	public void setActive(Boolean active) {
 		this.active = active;
 	}
 
+	public String getHome() {
+		return home;
+	}
+
+	public void setHome(String home) {
+		this.home = home;
+	}
 
 	public String getImageUrl() {
 		return imageUrl;
 	}
 
-
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
 
-
-	public String getRealName() {
-		return realName;
+	public String getName() {
+		return name;
 	}
 
-
-	public void setRealName(String realName) {
-		this.realName = realName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
+	public String getAbout() {
+		return about;
+	}
+
+	public void setAbout(String about) {
+		this.about = about;
+	}
 
 	@Override
 	public String toString() {
-		return "Musician [id=" + id + ", stageName=" + stageName + ", genre=" + genre + ", from=" + from + ", active="
-				+ active + ", imageUrl=" + imageUrl + ", realName=" + realName + "]";
+		return "Musician [id=" + id + ", name=" + name + ", genre=" + genre + ", home=" + home + ", active=" + active
+				+ ", imageUrl=" + imageUrl + ", about=" + about + "]";
 	}
-	
 
 }

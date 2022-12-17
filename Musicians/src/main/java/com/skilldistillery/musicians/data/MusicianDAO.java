@@ -12,7 +12,7 @@ public interface MusicianDAO {
 	Musician create(Musician musician);
 	Musician update(int id, Musician musician);
 	boolean deleteById(int id);
-	
+	List<Musician> findByKeyword(String keyword) ;
 	
 	
 }

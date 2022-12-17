@@ -44,7 +44,7 @@ class MusicianTest {
 	@Test
 	void test_Musician_entity_mapping() {
 		assertNotNull(musician);
-		assertEquals("Watsky", musician.getStageName());
+		assertEquals("Watsky", musician.getName());
 		assertEquals("Hip Hop", musician.getGenre());
 	}
 

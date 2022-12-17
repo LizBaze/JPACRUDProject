@@ -1,20 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Musicians</title>
+<title>Search Results</title>
 </head>
 <body>
+<br>
+<br>
+<br>
 <%@ include file="nav.jsp"%>
-<br>
-<br>
-	<h1>All your favorites</h1>
 
+
+<h1>Search Results</h1>
 	<table>
 	<c:forEach var = "musician" items = "${musicians}">
 	<tr>
@@ -23,11 +24,7 @@
 	</tr>
 	</c:forEach>
 	</table>
-	
-	<form action="createView.do">
-	<input type="submit" id="create" value="Add New Fave!"/>
-	</form>
-	
-	
+
+
 </body>
 </html>
