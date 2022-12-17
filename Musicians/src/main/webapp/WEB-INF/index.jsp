@@ -8,14 +8,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Musicians</title>
-</head>
-<body>
-<%@ include file="nav.jsp"%>
-<br>
-<br>
-	<h1>All your favorites</h1>
 
-	<table>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/../css/main.css" type="text/css">
+</head>
+
+<body id="FullPagePlusImage" >
+<%@ include file="nav.jsp"%>
+<div class="container">
+<br>
+<br>
+<br>
+
+	<h1 id="center">All your favorites</h1>
+	
+	<div id="center">
+	
+	<table id="transparentbackground" class="table .table-sm">
 	<c:forEach var = "musician" items = "${musicians}">
 	<tr>
 	<td><a href = "display.do?id=${musician.id}" > ${musician.name}</a></td>
@@ -24,10 +35,13 @@
 	</c:forEach>
 	</table>
 	
-	<form action="createView.do">
-	<input type="submit" id="create" value="Add New Fave!"/>
+	</div>
+	<br>
+	
+	<form id="center" action="createView.do">
+	<input  id="Button"  class="btn btn-primary" type="submit"  value="Add New Fave!"/>
 	</form>
 	
-	
+</div>
 </body>
 </html>

@@ -8,10 +8,12 @@
 
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/../css/main.css" type="text/css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+<nav id="Nav" class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
       <button
         class="navbar-toggler"
@@ -34,7 +36,7 @@
         		<form id="keyword" action="search.do">
       			<input class="form-control col-xs-3" type="search" placeholder="Search" aria-label="Search"  name="keyword">
       			</form>
-      			<button class="btn btn-outline-success my-2 my-sm-0" type="submit" form="keyword">Search</button>
+      			<button id="Button" class="btn btn-primary my-2 my-sm-0" type="submit" form="keyword">Search</button>
       </div>
     </div>
   </nav>

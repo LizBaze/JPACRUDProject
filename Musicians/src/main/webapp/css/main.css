@@ -1,0 +1,45 @@
+#DisplayImage {
+  width: auto,;
+  height: auto;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+#FullPage {
+	background-color: #5C1D6B;
+	color: #FDD602;
+		background-image: url("https://wallpaperaccess.com/full/3192193.jpg");
+}
+
+#FullPagePlusImage {
+	background-color: #5C1D6B;
+	color: #FDD602;
+	background-image: url("https://wallpaperaccess.com/full/3192193.jpg");
+}
+
+#transparentbackground{
+	background: rgba(0,0,0, 0.5);
+	color: #FDD602;
+}
+
+
+#Nav {
+	background-color: #B41EB2;
+}
+
+#Button{
+	background-color: #FF3179;
+	outline-color: #B41EB2;
+	border-color: #FF3179;
+}
+
+#center {
+	color: #FDD602;
+	margin: auto;
+	text-align: center;
+}
+
+
+a {
+	color: #FDD602;
+}
