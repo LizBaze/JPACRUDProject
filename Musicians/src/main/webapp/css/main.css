@@ -24,7 +24,13 @@
 
 
 #Nav {
-	background-color: #B41EB2;
+	background-color: #FF3179;
+	color: black;
+	font-weight: bold;
+}
+
+#hidden {
+	color: #FF3179;
 }
 
 #Button{
@@ -39,6 +45,9 @@
 	text-align: center;
 }
 
+#textAlingnRight {
+	text-align: right;
+}
 
 a {
 	color: #FDD602;

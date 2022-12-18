@@ -17,28 +17,41 @@
 
 <body id="FullPagePlusImage" >
 <%@ include file="nav.jsp"%>
-<div class="container">
+
+<br>
+<br>
 <br>
 <br>
 <br>
 
-	<h1 id="center">Search Results</h1>
+<div class="container" id="center">
+
+
+<c:choose>
+	<c:when test="${type == 'keyword'}">
+		<h2>Search By Keyword</h2>
+		
+		<form action="search.do" >
 	
-	<div id="center">
+		<input type="text" name="keyword">
 	
-	<table id="transparentbackground" class="table .table-sm">
-	<c:forEach var = "musician" items = "${musicians}">
-	<tr>
-	<td><a href = "display.do?id=${musician.id}" > ${musician.name}</a></td>
-	<td> ${musician.genre}</td>
-	</tr>
-	</c:forEach>
-	</table>
+		<input id="Button" class="btn btn-primary" type="submit" value="Submit"/>
 	
-	</div>
-	<br>
+		</form>
+	</c:when>
+	<c:otherwise>
+		<h2>Search By Genre</h2>
+		<form action="genre.do" >
 	
+		<input type="text" name="input">
 	
+		<input id="Button" class="btn btn-primary" type="submit" value="Submit"/>
+	
+		</form>
+		
+	</c:otherwise>
+</c:choose>	
 	
 </div>
 </body>
+</html>

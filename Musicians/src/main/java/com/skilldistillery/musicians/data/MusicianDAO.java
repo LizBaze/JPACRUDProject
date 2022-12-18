@@ -13,6 +13,7 @@ public interface MusicianDAO {
 	Musician update(int id, Musician musician);
 	boolean deleteById(int id);
 	List<Musician> findByKeyword(String keyword) ;
+	List<Musician> findByGenre(String keyword);
 	
 	
 }

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,20 +24,19 @@
 
 
 
-  <div class="row">
-    <div class="col-sm">
-		<img id="DisplayImage" src="${musician.imageUrl }">
-      
-    </div>
-    
+  <div class="row" id="textAlingnRight">
     <div class="col-sm">
 		<h1>${musician.name}</h1>
 		<h3>${musician.genre}</h3>
 		<h3>${musician.home}</h3>
-      	<c:if test="${musician.active == false}">
+		<c:if test="${musician.active == false}">
 			<h3>Retired</h3>
       	</c:if>
     </div>
+    
+    <div class="col-sm">
+		<img id="DisplayImage" src="${musician.imageUrl }">
+      
   </div>
 </div>
 <br>
@@ -47,7 +47,7 @@
 
 
 
-
+</div>
 
 
 <div class="container">

@@ -51,9 +51,17 @@ public class MusicianController {
 	
 	@GetMapping(path ="display.do")
 	public String display(@RequestParam("id") int id, Model model) {
+		String result = null;
+		
+		if (id %2 ==0) {
+			result= "display";
+		} else {
+			result= "altdisplay";
+		}
+		
 		
 		model.addAttribute("musician", dao.findByID(id));
-		return "display";
+		return result;
 	}
 	
 	
@@ -113,6 +121,26 @@ public class MusicianController {
 		
 		model.addAttribute("musicians", musicians);
 		return "search";
+	}
+	
+	
+	@GetMapping(path="searchView.do")
+	public String searchView(@RequestParam("type") String type, Model model) {
+		
+		model.addAttribute("type", type);
+		return "searchview";
+	}
+	
+	@GetMapping(path="genre.do")
+	public String genre(@RequestParam("input") String input, Model model) {
+		List<Musician> musicians = dao.findByGenre(input);
+		
+		//capitalize first letter for the A E S T H E T I C 
+		input = input.substring(0, 1).toUpperCase() + input.substring(1) ;
+		
+		model.addAttribute("musicians", musicians);
+		model.addAttribute("keyword", input);
+		return "genre";
 	}
 	
 	

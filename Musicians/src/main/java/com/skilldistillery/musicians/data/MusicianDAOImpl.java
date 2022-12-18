@@ -31,7 +31,7 @@ public class MusicianDAOImpl implements MusicianDAO {
 		List<Musician> result = null;
 		
 		String query = "SELECT m FROM Musician m WHERE m.name LIKE :keyword OR m.about LIKE :keyword2"
-				+ " OR m.genre LIKE :keyword3";
+				+ " OR m.genre LIKE :keyword3 ORDER BY m.name";
 		result = em.createQuery(query, Musician.class)
 				.setParameter("keyword", "%"+keyword+"%")
 				.setParameter("keyword2", "%"+keyword+"%")
@@ -45,7 +45,7 @@ public class MusicianDAOImpl implements MusicianDAO {
 	@Override
 	public List<Musician> findALL() {
 		
-		String query = "Select m FROM Musician m";
+		String query = "Select m FROM Musician m ORDER BY m.name";
 		List<Musician> results = em.createQuery(query, Musician.class).getResultList();
 		
 		return results;
@@ -84,6 +84,18 @@ public class MusicianDAOImpl implements MusicianDAO {
 		
 		
 		return false;
+	}
+
+	@Override
+	public List<Musician> findByGenre(String keyword) {
+		String query = "SELECT m FROM Musician m WHERE m.genre LIKE :keyword";
+		List<Musician> results = em.createQuery(query, Musician.class)
+									.setParameter("keyword", "%" + keyword + "%")
+									.getResultList();
+				
+				
+				
+		return results;
 	}
 
 }

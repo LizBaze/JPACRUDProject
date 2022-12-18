@@ -31,12 +31,19 @@
           <li class="nav-item active">
             <a class="nav-link" aria-current="page" href="index.do">Home</a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="createView.do">Add Artist</a>
+          </li>
          
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="searchView.do?type=genre">Search By Genre</a>
+          </li>
+         
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="searchView.do?type=keyword">Search By Keyword</a>
+          </li>
         </ul>
-        		<form id="keyword" action="search.do">
-      			<input class="form-control col-xs-3" type="search" placeholder="Search" aria-label="Search"  name="keyword">
-      			</form>
-      			<button id="Button" class="btn btn-primary my-2 my-sm-0" type="submit" form="keyword">Search</button>
+         <div id="hidden">Thanks for visiting!</div>
       </div>
     </div>
   </nav>
