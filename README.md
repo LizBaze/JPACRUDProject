@@ -3,6 +3,8 @@
 ### Description
 This is a fairly straightforward full-stack project. There is a database created using MySQL Workbench that tracks musicians/bands linked with a front-end web page that allows users to view individual entries, search by keyword or genre, make updates to artists, and delete entire entries.
 
+The deployed project can be found at http://3.141.163.188:8080/Musicians
+
 ### Technology Used
 - MySQL
 - JAVA
