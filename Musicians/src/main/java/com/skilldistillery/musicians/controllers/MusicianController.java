@@ -2,6 +2,8 @@ package com.skilldistillery.musicians.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -97,8 +99,11 @@ public class MusicianController {
 	
 	@PostMapping(path="update.do", 
 			params= { "id", "name", "genre", "home", "imageUrl", "active", "about" } )
-	public String update(int id, String name, String genre, String home, String imageUrl, boolean active, String about, RedirectAttributes redir) {
+	public String update(int id, String name, String genre, String home, String imageUrl, boolean active, String about, 
+			RedirectAttributes redir, HttpServletRequest request) {
 		
+		
+		request.getParameter(name);
 		Musician update = new Musician();
 		update.setName(name);
 		update.setGenre(genre);
